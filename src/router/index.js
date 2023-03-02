@@ -4,11 +4,19 @@ import VueRouter from "vue-router";
 Vue.use(VueRouter);
 
 const routes = [
-  // {
-  //   path: "/",
-  //   name: "home",
-  //   component: HomeView,
-  // },
+  // 首页
+  {
+    path: "/",
+    name: "home",
+    component: () => import("@/views/Home/Home"),
+  },
+  // 登录页
+  {
+    path: "/login",
+    name: "login",
+    component: () => import("@/views/Login/Login"),
+  },
+
   // {
   //   path: "/about",
   //   name: "about",
