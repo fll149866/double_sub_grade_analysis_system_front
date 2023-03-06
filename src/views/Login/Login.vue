@@ -1,8 +1,8 @@
 <template>
-  <el-container>
+  <el-container style="height:100%">
     <login-header></login-header>
     <login-main></login-main>
-    <el-footer>Footer</el-footer>
+    <el-footer style="height:4%"><p>Copyright©2023 1498665771@qq.com</p></el-footer>
   </el-container>
 </template>
 
@@ -17,4 +17,12 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.el-footer{
+    background-color: #999;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+</style>

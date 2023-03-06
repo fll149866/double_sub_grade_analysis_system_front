@@ -19,8 +19,7 @@ export default {};
   .system-logo {
     text-align: center;
     display: flex;
-    height: 80px;
-    width: 90px;
+    height: 90px;
     border-radius: 50%;
   }
   .system-name {
