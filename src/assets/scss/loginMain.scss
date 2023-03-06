@@ -1,0 +1,35 @@
+.el-main{
+    display: flex;
+    justify-content:space-between ;
+    // background-color: antiquewhite;
+    align-items: center;
+    .left-content{
+        width: 45%;
+        height: 70%;
+    }
+    .right-content{
+        width: 45%;
+        height: 70%;
+    }
+    h1{
+        text-align: center;
+    }
+    .font-img{
+        height: 60px;
+    }
+    .right-card{
+        height: 360px;
+    }
+    .left-card{
+        background-color: rgb(169,209,142);
+        height: 360px;
+        p{
+            line-height: 40px;
+            font-size: large;
+        }
+    }
+    .forget-pass{
+        float: right;
+    }
+
+}
