@@ -16,6 +16,12 @@ const routes = [
     name: "login",
     component: () => import("@/views/Login/Login"),
   },
+  // 重置密码页
+  {
+    path: "/resetPass",
+    name: "resetPass",
+    component: () => import("@/views/ResetPass/ResetPass"),
+  },
 
   // {
   //   path: "/about",

@@ -1,5 +1,5 @@
 <template>
-  <el-main :style="{'background': 'url(' + require('@/assets/images/forest.png') + ') no-repeat bottom center'}">
+  <el-main :style="{ background: 'url(' + require('@/assets/images/forest.png') + ') no-repeat bottom center' }">
     <div class="left-content">
       <el-card class="left-card">
         <h1>
@@ -40,7 +40,7 @@
             <el-button style="width: 100%" type="primary" @click="submitForm('loginForm')">登录</el-button>
           </el-form-item>
         </el-form>
-        <el-button class="forget-pass" type="info">忘记密码？</el-button>
+        <el-button class="forget-pass" type="info" @click="resetPass()">忘记密码？</el-button>
       </el-card>
     </div>
   </el-main>
@@ -107,6 +107,9 @@ export default {
     },
     resetForm(formName) {
       this.$refs[formName].resetFields();
+    },
+    resetPass() {
+      this.$router.push("/resetPass");
     },
   },
 };
