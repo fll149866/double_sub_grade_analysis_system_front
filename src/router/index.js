@@ -1,6 +1,18 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 
+const originalPush = VueRouter.prototype.push;
+VueRouter.prototype.push = function (location, onComplete, onAbort) {
+  if (!onComplete && !onAbort && typeof Promise !== "undefined") {
+    return originalPush.call(this, location, onComplete, onAbort).catch((err) => {
+      err;
+    });
+  } else {
+    // <router-link>进行路由跳转时，传了一个oncomplate方法
+    originalPush.call(this, location, onComplete, onAbort);
+  }
+};
+
 Vue.use(VueRouter);
 
 const routes = [

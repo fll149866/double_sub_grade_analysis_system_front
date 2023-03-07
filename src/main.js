@@ -20,7 +20,13 @@ router.beforeEach((to, from, next) => {
   store.commit("getToken");
   let token = store.state.user.token;
   if (!token && to.name !== "login") {
-    next({ name: "login" });
+    // 未登录可访问
+    if (to.name === "resetPass") {
+      next();
+    } else {
+      // 其他页都需要登录才可访问
+      next({ name: "login" });
+    }
   } else {
     next();
   }
